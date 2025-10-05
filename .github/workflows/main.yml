@@ -28,6 +28,8 @@ jobs:
   client_build:
       name: Build client
       runs-on: ubuntu-latest
+      env:
+        REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
       steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
