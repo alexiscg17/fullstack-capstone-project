@@ -7,13 +7,11 @@ function MainPage() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // fetch all gifts
         const fetchGifts = async () => {
             try {
                 let url = `${urlConfig.backendUrl}/api/gifts`
                 const response = await fetch(url);
                 if (!response.ok) {
-                    //something went wrong
                     throw new Error(`HTTP error; ${response.status}`)
                 }
                 const data = await response.json();

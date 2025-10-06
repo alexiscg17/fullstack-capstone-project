@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { urlConfig } from '../../config';
 import { useAppContext } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import './LoginPage.css';
 
@@ -84,7 +84,10 @@ function LoginPage() {
                         </div>
                         <button className="btn btn-primary w-100 mb-3" onClick={handleLogin}>Login</button>
                         <p className="mt-4 text-center">
-                            New here? <a href="/app/register" className="text-primary">Register Here</a>
+                            New here?{" "}
+                            <Link to="/app/register" className="text-primary">
+                                Register Here
+                            </Link>
                         </p>
                     </div>
                 </div>
